@@ -1,13 +1,13 @@
-# Created by https://www.toptal.com/developers/gitignore/api/go,code,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=go,code,macos
+# Created by https://www.toptal.com/developers/gitignore/api/go,macos,visualstudiocode,linux,vagrant,certificates
+# Edit at https://www.toptal.com/developers/gitignore?templates=go,macos,visualstudiocode,linux,vagrant,certificates
 
-### Code ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
+### certificates ###
+certs
+*.pem
+*.key
+*.crt
+*.cer
+*.priv
 
 ### Go ###
 # Binaries for programs and plugins
@@ -29,6 +29,21 @@
 ### Go Patch ###
 /vendor/
 /Godeps/
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
 ### macOS ###
 # General
@@ -59,4 +74,30 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# End of https://www.toptal.com/developers/gitignore/api/go,code,macos
+### Vagrant ###
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.log
+
+### Vagrant Patch ###
+*.box
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/go,macos,visualstudiocode,linux,vagrant,certificates

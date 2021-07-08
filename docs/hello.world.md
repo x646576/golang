@@ -1,4 +1,6 @@
-# Get started
+# Hello World
+
+example code: [hello](../examples/hello/)
 
 1. Create a project
 1. Run a script

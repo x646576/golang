@@ -19,3 +19,22 @@ zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binsc
 ```bash
 source /Users/dodo/.gvm/scripts/gvm
 ```
+
+### Install
+
+```bash
+gvm install go1.16 -B
+gvm alias create 16 go1.16
+gvm use 16 # --default
+```
+
+### List installed
+
+```bash
+gvm list
+
+gvm gos (installed)
+
+   16
+=> go1.16
+```

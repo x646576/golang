@@ -4,6 +4,13 @@
 
 - [Install](install.md): go version manager
 - [Hello World](examples/helloworld/README.md): init, compile, run, test
+- Concurrency
+  - CSP(Communicating Sequential Processes)
+  - goroutine, sync, channel, select
+  - patterns
+  - scaling
+  - runtime
+- Error, Race detection, pprof
 
 ## Link
 

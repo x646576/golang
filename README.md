@@ -4,7 +4,7 @@
 
 - [Install](install.md): go version manager
 - [Hello World](examples/helloworld/README.md): init, compile, run, test
-- Concurrency
+- [Concurrency](docs/concurrency.md): race condition, deadlock conditions
   - CSP(Communicating Sequential Processes)
   - goroutine, sync, channel, select
   - patterns
@@ -28,6 +28,11 @@
 
 - [gvm](https://github.com/moovweb/gvm): Go Version Manager
 
+### book
+
+- [Concurrency in Go](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/) by Katherine Cox-Buday
+
 ### blogs
 
 - [You don't need virtualenv in Go](https://eli.thegreenplace.net/2020/you-dont-need-virtualenv-in-go/): `go.mod` file specifies the exact versions of dependency packages
+- [The Free Lunch Is Over](http://www.gotw.ca/publications/concurrency-ddj.htm): We desperately need a higher-level programming model for concurrency than languages offer today

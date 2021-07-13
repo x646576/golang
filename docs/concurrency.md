@@ -42,3 +42,8 @@ Wikipedia:
 - Who is responsible for the concurrency?
 - How is the problem space mapped onto concurrency primitives?
 - Who is responsible for the synchronization?
+
+## Concurrency vs Parallelism
+
+- Concurrency is a property of the code.
+- Parallelism is a property of the running program.

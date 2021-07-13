@@ -5,7 +5,7 @@
 - [Install](install.md): go version manager
 - [Hello World](examples/helloworld/README.md): init, compile, run, test
 - [Concurrency](docs/concurrency.md): race condition, deadlock conditions
-  - CSP(Communicating Sequential Processes)
+  - [CSP](docs/csp.md): Communicating Sequential Processes
   - goroutine, sync, channel, select
   - patterns
   - scaling

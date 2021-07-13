@@ -17,7 +17,7 @@ zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binsc
 ### Restart a terminal session
 
 ```bash
-source /Users/dodo/.gvm/scripts/gvm
+source /Users/$USER/.gvm/scripts/gvm
 ```
 
 ### Install
@@ -37,4 +37,42 @@ gvm gos (installed)
 
    16
 => go1.16
+```
+
+---
+
+## Visual Studio Code Extension
+
+Extension: [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
+
+```bash
+go env
+
+GOPATH="/Users/$USER/.gvm/pkgsets/go1.16/global"
+GOROOT="/Users/$USER/.gvm/gos/go1.16"
+```
+
+**Preferences: Configure Language Specific Settings** `⇧⌘P` → Go
+
+`settings.json`
+
+```json
+{
+  "go.gopath": "/Users/$USER/.gvm/pkgsets/go1.16/global",
+  "go.goroot": "/Users/$USER/.gvm/gos/go1.16"
+}
+```
+
+### gopls
+
+VS Code should handle that step for you.
+
+```bash
+Tools environment: GOPATH=/Users/$USER/.gvm/pkgsets/go1.16/global
+Installing 1 tool at /Users/$USER/.gvm/pkgsets/go1.16/global/bin in module mode.
+  gopls
+
+Installing golang.org/x/tools/gopls (/Users/$USER/.gvm/pkgsets/go1.16/global/bin/gopls) SUCCEEDED
+
+All tools successfully installed. You are ready to Go :).
 ```

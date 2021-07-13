@@ -59,7 +59,16 @@ GOROOT="/Users/$USER/.gvm/gos/go1.16"
 ```json
 {
   "go.gopath": "/Users/$USER/.gvm/pkgsets/go1.16/global",
-  "go.goroot": "/Users/$USER/.gvm/gos/go1.16"
+  "go.goroot": "/Users/$USER/.gvm/gos/go1.16",
+  "[go]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  }
 }
 ```
 

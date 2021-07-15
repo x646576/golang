@@ -12,6 +12,21 @@
   - runtime
 - Error, Race detection, pprof
 
+---
+
+## Virtual Machine
+
+- Download: [Vagrant](https://www.vagrantup.com/downloads)
+- Download: [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+```bash
+cd vm
+vagrant up
+vagrant ssh
+```
+
+---
+
 ## Link
 
 ### [golang.org](https://golang.org/)
@@ -31,6 +46,8 @@
 ### book
 
 - [Concurrency in Go](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/) by Katherine Cox-Buday
+  - [Information](https://katherine.cox-buday.com/concurrency-in-go/)
+  - [Source Code](https://github.com/kat-co/concurrency-in-go-src)
 
 ### blogs
 

@@ -20,7 +20,7 @@ a technique for implementing lexically scoped name binding in a language with fi
 
 ### goroutine
 
-- [example/features/goroutine](./../examples/features/goroutine/hello.go)
+- [example/features/goroutine/hello.go](./../examples/features/goroutine/hello.go)
 
 Results:
 
@@ -42,7 +42,7 @@ End
 
 ### Memory of a goroutine
 
-- [examples/features/goroutine/memory](../examples/features/goroutine/memory/memory.go)
+- [examples/features/goroutine/memory.go](../examples/features/goroutine/memory.go)
 
 Result:
 

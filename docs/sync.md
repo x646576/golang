@@ -95,4 +95,25 @@ c.L.Unlock()
 
 ## [Once](https://pkg.go.dev/sync#Once)
 
+How often Go itself uses `Once`:
+
+```bash
+grep -ir sync.Once $(go env GOROOT)/src | wc -l
+
+128
+```
+
+```go
+var once sync.Once
+
+once.Do(func() {
+  fmt.Println("One")
+})
+once.Do(func() {
+  fmt.Println("Two")
+})
+
+// One
+```
+
 ## [Pool](https://pkg.go.dev/sync#Pool)

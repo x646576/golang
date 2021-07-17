@@ -57,19 +57,19 @@ GOROOT="/Users/$USER/.gvm/gos/go1.16"
 `settings.json`
 
 ```json
-{
   "go.gopath": "/Users/$USER/.gvm/pkgsets/go1.16/global",
   "go.goroot": "/Users/$USER/.gvm/gos/go1.16",
   "[go]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
-    "editor.suggest.snippetsPreventQuickSuggestions": false
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.defaultFormatter": "golang.go"
+  },
+  "gopls": {
+    "experimentalWorkspaceModule": true
   }
-}
 ```
 
 ### gopls
@@ -80,8 +80,13 @@ VS Code should handle that step for you.
 Tools environment: GOPATH=/Users/$USER/.gvm/pkgsets/go1.16/global
 Installing 1 tool at /Users/$USER/.gvm/pkgsets/go1.16/global/bin in module mode.
   gopls
+  gopkgs
+  go-outline
+  dlv
+  staticcheck
 
 Installing golang.org/x/tools/gopls (/Users/$USER/.gvm/pkgsets/go1.16/global/bin/gopls) SUCCEEDED
+# ...
 
 All tools successfully installed. You are ready to Go :).
 ```

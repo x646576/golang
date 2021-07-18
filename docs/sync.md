@@ -103,6 +103,8 @@ grep -ir sync.Once $(go env GOROOT)/src | wc -l
 128
 ```
 
+- [examples/features/sync/once/once.go](../examples/features/sync/once/once.go)
+
 ```go
 var once sync.Once
 
@@ -112,8 +114,42 @@ once.Do(func() {
 once.Do(func() {
   fmt.Println("Two")
 })
-
-// One
 ```
 
+`One`
+
 ## [Pool](https://pkg.go.dev/sync#Pool)
+
+- [examples/features/sync/pool/pool.go](../examples/features/sync/pool/pool.go)
+- [examples/features/sync/pool/memory.go](../examples/features/sync/pool/memory.go)
+- [examples/features/sync/pool/server_test.go](../examples/features/sync/pool/server_test.go)
+- [examples/features/sync/pool/pool-server_test.go](../examples/features/sync/pool/pool-server_test.go)
+
+```go
+myPool := &sync.Pool{
+  New: func() interface{} {
+    return struct{}{}
+  },
+}
+
+instance := myPool.Get()
+myPool.Put(instance)
+```
+
+### Benchmark
+
+```bash
+go test -bench=. -benchtime=10s server_test.go
+
+BenchmarkNetworkRequest-8             10        1005006833 ns/op
+PASS
+ok      command-line-arguments  11.066s
+```
+
+```bash
+go test -bench=. -benchtime=10s pool-server_test.go
+
+BenchmarkNetworkRequest-8           5800           6536593 ns/op
+PASS
+ok      command-line-arguments  51.041s
+```

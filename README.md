@@ -36,6 +36,10 @@
 - [Concurrency in Go](https://www.oreilly.com/library/view/concurrency-in-go/9781491941294/) by Katherine Cox-Buday
   - [Information](https://katherine.cox-buday.com/concurrency-in-go/)
   - [Source Code](https://github.com/kat-co/concurrency-in-go-src)
+- [예제로 배우는 Go 프로그래밍](http://golang.site/go/basics) by Alex Lee
+  - [applications](http://golang.site/go/applications)
+  - [tips](http://golang.site/go/tips)
+  - [quiz](http://golang.site/quiz/tests)
 
 ### blogs
 

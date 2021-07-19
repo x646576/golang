@@ -6,6 +6,7 @@
 4. Go versions: `gvm list`
 5. Select: `gvm use goX.Y.Z`
 6. Env vars: `go env`
+7. Editor extension
 
 ## Go Version Manager
 

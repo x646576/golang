@@ -52,7 +52,7 @@ Result:
 
 ### Benchmark Context Switch
 
-Use Linux or [Virtual Machine](/README.md#virtual-machine)
+Use Linux or [Virtual Machine](vm.md)
 
 ### Install Packages
 

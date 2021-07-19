@@ -6,24 +6,12 @@
 - [Hello World](examples/helloworld/README.md): init, compile, run, test
 - [Concurrency](docs/concurrency.md): race condition, deadlock conditions
   - [CSP](docs/csp.md): Communicating Sequential Processes
-  - [goroutine](docs/goroutine.md), sync, channel, select
+  - [goroutine](docs/goroutine.md), [sync](docs/sync.md), [channel](docs/channel.md), select
   - patterns
   - scaling
   - runtime
 - Error, Race detection, pprof
-
----
-
-## Virtual Machine
-
-- Download: [Vagrant](https://www.vagrantup.com/downloads)
-- Download: [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-
-```bash
-cd vm
-vagrant up
-vagrant ssh
-```
+- Use [Virtual Machine](docs/vm.md): vagrant
 
 ---
 

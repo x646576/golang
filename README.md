@@ -26,6 +26,8 @@
   - [Effective Go](https://golang.org/doc/effective_go)
 - [modules](https://golang.org/ref/mod): Dependency management for Go
   - [Using Go Modules](https://blog.golang.org/using-go-modules)
+- [Specification](https://golang.org/ref/spec)
+  - [Keywords](https://golang.org/ref/spec#Keywords)
 
 ### tools
 

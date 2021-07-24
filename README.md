@@ -11,7 +11,6 @@
   - scaling
   - runtime
 - Error, Race detection, pprof
-- Use [Virtual Machine](docs/vm.md): vagrant
 
 ---
 
@@ -47,3 +46,9 @@
 
 - [You don't need virtualenv in Go](https://eli.thegreenplace.net/2020/you-dont-need-virtualenv-in-go/): `go.mod` file specifies the exact versions of dependency packages
 - [The Free Lunch Is Over](http://www.gotw.ca/publications/concurrency-ddj.htm): We desperately need a higher-level programming model for concurrency than languages offer today
+
+---
+
+## Virtual Machine
+
+Go in [Virtual Machine](docs/vm.md)

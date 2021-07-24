@@ -6,7 +6,7 @@
 - [Hello World](examples/helloworld/README.md): init, compile, run, test
 - [Concurrency](docs/concurrency.md): race condition, deadlock conditions
   - [CSP](docs/csp.md): Communicating Sequential Processes
-  - [goroutine](docs/goroutine.md), [sync](docs/sync.md), [channel](docs/channel.md), select
+  - [goroutine](docs/goroutine.md), [sync](docs/sync.md), [channel](docs/channel.md), [select](docs/select.md)
   - patterns
   - scaling
   - runtime

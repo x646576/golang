@@ -6,7 +6,12 @@
 - [Hello World](examples/helloworld/README.md): init, compile, run, test
 - [Concurrency](docs/concurrency.md): race condition, deadlock conditions
   - [CSP](docs/csp.md): Communicating Sequential Processes
-  - [goroutine](docs/goroutine.md), [sync](docs/sync.md), [channel](docs/channel.md), [select](docs/select.md), [GOMAXPROCS](docs/gomaxprocs.md)
+  - Features
+    - [goroutine](docs/goroutine.md)
+    - [sync](docs/sync.md): WaitGroup, Mutex, Cond, Once, Pool
+    - [channel](docs/channel.md)
+    - [select](docs/select.md)
+    - [GOMAXPROCS](docs/gomaxprocs.md) lever
   - patterns
   - scaling
   - runtime
@@ -27,6 +32,13 @@
   - [Using Go Modules](https://blog.golang.org/using-go-modules)
 - [Specification](https://golang.org/ref/spec)
   - [Keywords](https://golang.org/ref/spec#Keywords)
+- [Frequently Asked Questions](https://golang.org/doc/faq)
+
+### github
+
+- [golang](https://github.com/golang)
+- [golang/go](https://github.com/golang/go)
+  - [wiki](https://github.com/golang/go/wiki)
 
 ### tools
 

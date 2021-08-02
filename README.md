@@ -12,9 +12,30 @@
     - [channel](docs/channel.md)
     - [select](docs/select.md)
     - [GOMAXPROCS](docs/gomaxprocs.md) lever
-  - patterns
+  - Patterns
+    - confinement
+    - for-select loop
+    - preventing goroutine leaks
+    - or-channel
+    - error handling
+    - pipelines
+    - fan-out, fan-in
+    - or-done-channel
+    - tee-channel
+    - bridge-channel
+    - queueing
+    - context package
   - scaling
+    - error propagation
+    - timeouts and cancellation
+    - heartbeats
+    - replicated requests
+    - rate limiting
+    - healing unhealthy goroutines
   - runtime
+    - work stealing
+      - stealing tasks or continuations
+    - presenting all of this to the developer
 - Error, Race detection, pprof
 
 ---

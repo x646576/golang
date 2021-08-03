@@ -12,19 +12,19 @@
     - [channel](docs/channel.md)
     - [select](docs/select.md)
     - [GOMAXPROCS](docs/gomaxprocs.md) lever
-  - Patterns
-    - confinement
-    - for-select loop
-    - preventing goroutine leaks
-    - or-channel
-    - error handling
-    - pipelines
-    - fan-out, fan-in
-    - or-done-channel
-    - tee-channel
-    - bridge-channel
-    - queueing
-    - context package
+  - [Patterns](docs/patterns.md)
+    - [confinement](docs/patterns.md#confinement)
+    - [for-select loop](docs/patterns.md#for-select-loop)
+    - [preventing goroutine leaks](docs/patterns.md#preventing-goroutine-leaks)
+    - [or-channel](docs/patterns.md#or-channel)
+    - [error handling](docs/patterns.md#error-handling)
+    - [pipelines](docs/patterns.md#pipelines)
+    - [fan-out, fan-in](docs/patterns.md#fan-out-fan-in)
+    - [or-done-channel](docs/patterns.md#or-done-channel)
+    - [tee-channel](docs/patterns.md#tee-channel)
+    - [bridge-channel](docs/patterns.md#bridge-channel)
+    - [queueing](docs/patterns.md#queueing)
+    - [context package](docs/patterns.md#context-package)
   - scaling
     - error propagation
     - timeouts and cancellation

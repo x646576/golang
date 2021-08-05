@@ -121,11 +121,41 @@ close(done) // close goroutine
 
 ## or-channel
 
-code: [](../examples/patterns/.go)
+code: [or-channel](../examples/patterns/or-channel.go)
+
+Combine one or more _done_ channels into a single _done_ channel that closes if any of its component channels close.
+
+```go
+<-or(
+  sig(2*time.Hour),
+  sig(5*time.Minute),
+  sig(1*time.Second),
+  sig(1*time.Hour),
+  sig(1*time.Minute),
+)
+
+// done after 1.001742754s
+```
 
 ## Error handling
 
-code: [](../examples/patterns/.go)
+code: [error handling](../examples/patterns/error-handling.go)
+
+```go
+type Result struct {
+  Error    error
+  Response *http.Response
+}
+
+var checkStatus func(done <-chan interface{}, urls ...string) <-chan Result
+
+for result := range checkStatus(done, urls...) {
+  if result.Error != nil {
+    continue
+  }
+  // success
+}
+```
 
 ## Pipelines
 

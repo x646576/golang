@@ -159,7 +159,31 @@ for result := range checkStatus(done, urls...) {
 
 ## Pipelines
 
-code: [](../examples/patterns/.go)
+code: [pipelines](../examples/patterns/pipelines.go), [generators](../examples/patterns/pipelines-generators.go), [benchmark](../examples/patterns/pipeline-benchmark_test.go)
+
+```go
+var generator func(done <-chan interface{}, integers ...int) <-chan int
+var multiply func(done <-chan interface{}, intStream <-chan int, multiplier int) <-chan int
+var add func(done <-chan interface{}, intStream <-chan int, additive int) <-chan int
+
+pipelines := multiply(done, add(done, multiply(done, intStream, 2), 1), 2)
+
+for v := range pipelines {
+}
+```
+
+### Benchmark
+
+```bash
+go test -bench=. pipeline-benchmark_test.go
+```
+
+```bash
+BenchmarkGeneric-8        618374              1846 ns/op
+BenchmarkTyped-8         1000000              1243 ns/op
+PASS
+ok      command-line-arguments  2.424s
+```
 
 ## Fan-out, Fan-in
 

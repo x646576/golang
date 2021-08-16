@@ -187,7 +187,95 @@ ok      command-line-arguments  2.424s
 
 ## Fan-out, Fan-in
 
-code: [](../examples/patterns/.go)
+- Fan-out: the process of starting multiple goroutines to handle input from the pipeline
+- Fan-in: the process of combining multiple results into one channel
+
+Consider fanning out:
+
+- It doesn’t rely on values that the stage had calculated before.
+- It takes a long time to run.
+
+### Prime finder
+
+code: [prime finder](../examples/patterns/primefinder.go)
+
+```bash
+Primes:
+        24941317
+        36122539
+        6410693
+        10128161
+        25511527
+        2107939
+        14004383
+        7190363
+        45931967
+        2393161
+Search took: 23.802461435s
+```
+
+### Fan-out
+
+code: [fan-out prime finder](../examples/patterns/fanout-primefinder.go)
+
+```go
+numFinders := runtime.NumCPU()
+finders := make([]<-chan interface{}, numFinders)
+for i := 0; i < numFinders; i++ {
+  finders[i] = primeFinder(done, randIntStream)
+}
+
+fanIn := func(
+  done <-chan interface{},
+  channels ...<-chan interface{},
+) <-chan interface{} {
+  var wg sync.WaitGroup
+  multiplexedStream := make(chan interface{})
+
+  multiplex := func(c <-chan interface{}) {
+    defer wg.Done()
+    for i := range c {
+      select {
+      case <-done:
+        return
+      case multiplexedStream <- i:
+      }
+    }
+  }
+
+  wg.Add(len(channels)) // Select from all the channels
+  for _, c := range channels {
+    go multiplex(c)
+  }
+
+  go func() {
+    wg.Wait() // Wait for all the reads to complete
+    close(multiplexedStream)
+  }()
+
+  return multiplexedStream
+}
+
+for prime := range take(done, fanIn(done, finders...), 10) {
+  fmt.Printf("\t%d\n", prime)
+}
+```
+
+```bash
+Spinning up 8 prime finders.
+Primes:
+        6410693
+        24941317
+        10128161
+        36122539
+        25511527
+        2107939
+        14004383
+        7190363
+        2393161
+        45931967
+Search took: 5.498295404s
+```
 
 ## or-done-channel
 

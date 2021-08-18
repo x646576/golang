@@ -279,7 +279,35 @@ Search took: 5.498295404s
 
 ## or-done-channel
 
-code: [](../examples/patterns/.go)
+code: [or-done](../examples/patterns/or-done.go)
+
+```go
+orDone := func(done, c <-chan interface{}) <-chan interface{} {
+  valStream := make(chan interface{})
+  go func() {
+    defer close(valStream)
+    for {
+      select {
+      case <-done:
+        return
+      case v, ok := <-c:
+        if ok == false {
+          return
+        }
+        select {
+        case valStream <- v:
+        case <-done:
+        }
+      }
+    }
+  }()
+  return valStream
+}
+
+for val := range orDone(done, myChan) {
+  // do somthing with val
+}
+```
 
 ## tee-channel
 

@@ -1,6 +1,22 @@
 package main
 
+import "fmt"
+
 func main() {
+
+	total := 5
+	breakPoint := 3
+
+	myChan := make(chan interface{})
+	go func() {
+		defer close(myChan)
+		for i := 1; i <= total; i++ {
+			myChan <- i
+			if i == breakPoint {
+				return
+			}
+		}
+	}()
 
 	done := make(chan interface{})
 	defer close(done)
@@ -27,8 +43,18 @@ func main() {
 		return valStream
 	}
 
+	fmt.Printf("Loop %v\n", total)
 	for val := range orDone(done, myChan) {
-		// do somthing with val
+		fmt.Printf("%v / %v\n", val, total)
 	}
+	fmt.Println("End")
 
 }
+
+/*
+Loop 5
+1 / 5
+2 / 5
+3 / 5
+End
+*/

@@ -306,6 +306,7 @@ orDone := func(done, c <-chan interface{}) <-chan interface{} {
 
 for val := range orDone(done, myChan) {
   // do somthing with val
+  fmt.Println(val)
 }
 ```
 

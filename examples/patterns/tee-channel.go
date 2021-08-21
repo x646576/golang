@@ -69,15 +69,15 @@ func main() {
 			defer close(out1)
 			defer close(out2)
 
-			for val := range orDone(done, in) {
+			for val := range orDone(done, in) { // 1 2 1 2
 				var out1, out2 = out1, out2
-				for i := 0; i < 2; i++ {
+				for i := 0; i < 2; i++ { // 0 1 <- to ensure both are written
 					select {
 					case <-done:
 					case out1 <- val:
-						out1 = nil
+						out1 = nil // block writing
 					case out2 <- val:
-						out2 = nil
+						out2 = nil // block writing
 					}
 				}
 			}
@@ -88,7 +88,7 @@ func main() {
 	done := make(chan interface{})
 	defer close(done)
 
-	out1, out2 := tee(done, take(done, repeat(done, 1, 2), 4))
+	out1, out2 := tee(done, take(done, repeat(done, 1, 2), 4)) // [1 2 1 2] 1 2 1 2 1 2...
 
 	for val1 := range out1 {
 		fmt.Printf("out1: %v, out2: %v\n", val1, <-out2)

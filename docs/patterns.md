@@ -312,7 +312,11 @@ for val := range orDone(done, myChan) {
 
 ## tee-channel
 
-code: [](../examples/patterns/.go)
+code: [tee-channel](../examples/patterns/tee-channel.go)
+
+```go
+
+```
 
 ## bridge-channel
 

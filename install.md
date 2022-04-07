@@ -24,9 +24,9 @@ source /Users/$USER/.gvm/scripts/gvm
 ### Install
 
 ```bash
-gvm install go1.16 -B
-gvm alias create 16 go1.16
-gvm use 16 # --default
+gvm install go1.18
+gvm alias create 18 go1.18
+gvm use 18 # --default
 ```
 
 ### List installed
@@ -49,8 +49,8 @@ Extension: [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
 ```bash
 go env
 
-GOPATH="/Users/$USER/.gvm/pkgsets/go1.16/global"
-GOROOT="/Users/$USER/.gvm/gos/go1.16"
+GOPATH="/Users/$USER/.gvm/pkgsets/go1.18/global"
+GOROOT="/Users/$USER/.gvm/gos/go1.18"
 ```
 
 **Preferences: Configure Language Specific Settings** `⇧⌘P` → Go
@@ -58,8 +58,8 @@ GOROOT="/Users/$USER/.gvm/gos/go1.16"
 `settings.json`
 
 ```json
-  "go.gopath": "/Users/$USER/.gvm/pkgsets/go1.16/global",
-  "go.goroot": "/Users/$USER/.gvm/gos/go1.16",
+  "go.gopath": "/Users/$USER/.gvm/pkgsets/go1.18/global",
+  "go.goroot": "/Users/$USER/.gvm/gos/go1.18",
   "[go]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
@@ -78,15 +78,15 @@ GOROOT="/Users/$USER/.gvm/gos/go1.16"
 VS Code should handle that step for you.
 
 ```bash
-Tools environment: GOPATH=/Users/$USER/.gvm/pkgsets/go1.16/global
-Installing 1 tool at /Users/$USER/.gvm/pkgsets/go1.16/global/bin in module mode.
+Tools environment: GOPATH=/Users/$USER/.gvm/pkgsets/go1.18/global
+Installing 1 tool at /Users/$USER/.gvm/pkgsets/go1.18/global/bin in module mode.
   gopls
   gopkgs
   go-outline
   dlv
   staticcheck
 
-Installing golang.org/x/tools/gopls (/Users/$USER/.gvm/pkgsets/go1.16/global/bin/gopls) SUCCEEDED
+Installing golang.org/x/tools/gopls (/Users/$USER/.gvm/pkgsets/go1.18/global/bin/gopls) SUCCEEDED
 # ...
 
 All tools successfully installed. You are ready to Go :).

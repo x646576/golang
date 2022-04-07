@@ -14,7 +14,7 @@ a technique for implementing lexically scoped name binding in a language with fi
 
 ## Source Code
 
-[src/runtime/proc.go](https://cs.opensource.google/go/go/+/refs/tags/go1.16.6:src/runtime/proc.go)
+[src/runtime/proc.go](https://cs.opensource.google/go/go/+/refs/tags/go1.18:src/runtime/proc.go)
 
 ## Example
 

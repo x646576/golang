@@ -36,8 +36,8 @@ gvm list
 
 gvm gos (installed)
 
-   16
-=> go1.16
+   18
+=> go1.18
 ```
 
 ---

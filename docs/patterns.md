@@ -2,7 +2,7 @@
 
 ## Confinement
 
-code: [confinement](../examples/patterns/confinement.go)
+code: [confinement](../src/patterns/confinement.go)
 
 ```go
 printData := func(wg *sync.WaitGroup, data []byte) {
@@ -24,7 +24,7 @@ wg.Wait()
 
 ## for-select loop
 
-code: [for-select](../examples/patterns/for-select.go)
+code: [for-select](../src/patterns/for-select.go)
 
 ```go
 for {
@@ -62,7 +62,7 @@ for {
 
 ## Preventing goroutine leaks
 
-code: [goroutine leaks](../examples/patterns/goroutine-leaks.go), [goroutine leaks 2](../examples/patterns/goroutine-leaks2.go)
+code: [goroutine leaks](../src/patterns/goroutine-leaks.go), [goroutine leaks 2](../src/patterns/goroutine-leaks2.go)
 
 ### example 1
 
@@ -121,7 +121,7 @@ close(done) // close goroutine
 
 ## or-channel
 
-code: [or-channel](../examples/patterns/or-channel.go)
+code: [or-channel](../src/patterns/or-channel.go)
 
 Combine one or more _done_ channels into a single _done_ channel that closes if any of its component channels close.
 
@@ -139,7 +139,7 @@ Combine one or more _done_ channels into a single _done_ channel that closes if 
 
 ## Error handling
 
-code: [error handling](../examples/patterns/error-handling.go)
+code: [error handling](../src/patterns/error-handling.go)
 
 ```go
 type Result struct {
@@ -159,7 +159,7 @@ for result := range checkStatus(done, urls...) {
 
 ## Pipelines
 
-code: [pipelines](../examples/patterns/pipelines.go), [generators](../examples/patterns/pipelines-generators.go), [benchmark](../examples/patterns/pipeline-benchmark_test.go)
+code: [pipelines](../src/patterns/pipelines.go), [generators](../src/patterns/pipelines-generators.go), [benchmark](../src/patterns/pipeline-benchmark_test.go)
 
 ```go
 var generator func(done <-chan interface{}, integers ...int) <-chan int
@@ -197,7 +197,7 @@ Consider fanning out:
 
 ### Prime finder
 
-code: [prime finder](../examples/patterns/primefinder.go)
+code: [prime finder](../src/patterns/primefinder.go)
 
 ```bash
 Primes:
@@ -216,7 +216,7 @@ Search took: 23.802461435s
 
 ### Fan-out
 
-code: [fan-out prime finder](../examples/patterns/fanout-primefinder.go)
+code: [fan-out prime finder](../src/patterns/fanout-primefinder.go)
 
 ```go
 numFinders := runtime.NumCPU()
@@ -279,7 +279,7 @@ Search took: 5.498295404s
 
 ## or-done-channel
 
-code: [or-done](../examples/patterns/or-done.go)
+code: [or-done](../src/patterns/or-done.go)
 
 ```go
 orDone := func(done, c <-chan interface{}) <-chan interface{} {
@@ -312,7 +312,7 @@ for val := range orDone(done, myChan) {
 
 ## tee-channel
 
-code: [tee-channel](../examples/patterns/tee-channel.go)
+code: [tee-channel](../src/patterns/tee-channel.go)
 
 ```go
 tee := func(
@@ -345,12 +345,12 @@ tee := func(
 
 ## bridge-channel
 
-code: [](../examples/patterns/.go)
+code: [](../src/patterns/.go)
 
 ## Queueing
 
-code: [](../examples/patterns/.go)
+code: [](../src/patterns/.go)
 
 ## Context package
 
-code: [](../examples/patterns/.go)
+code: [](../src/patterns/.go)

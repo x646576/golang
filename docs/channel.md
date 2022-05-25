@@ -2,12 +2,12 @@
 
 Communicate information between goroutines.
 
-- Direction: [Read and Write](../examples/features/channel/readwrite.go), [Read and Write String Channel](../examples/features/channel/readwriteString.go)
-- Close: [Return second value](../examples/features/channel/close.go), [for range](../examples/features/channel/loop.go), [Wait empty channel](../examples/features/channel/waitAndUnblockAll.go)
+- Direction: [Read and Write](../src/features/channel/readwrite.go), [Read and Write String Channel](../src/features/channel/readwriteString.go)
+- Close: [Return second value](../src/features/channel/close.go), [for range](../src/features/channel/loop.go), [Wait empty channel](../src/features/channel/waitAndUnblockAll.go)
   - open: `true`
   - close: `false`
-- [Buffer](../examples/features/channel/buffer.go)
-- [Channel Owner](../examples/features/channel/owner.go)
+- [Buffer](../src/features/channel/buffer.go)
+- [Channel Owner](../src/features/channel/owner.go)
 
 ## nil
 

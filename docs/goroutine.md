@@ -20,7 +20,7 @@ a technique for implementing lexically scoped name binding in a language with fi
 
 ### goroutine
 
-- [example/features/goroutine/hello.go](./../examples/features/goroutine/hello.go)
+- [example/features/goroutine/hello.go](./../src/features/goroutine/hello.go)
 
 Results:
 
@@ -42,7 +42,7 @@ End
 
 ### Memory of a goroutine
 
-- [examples/features/goroutine/memory.go](../examples/features/goroutine/memory.go)
+- [src/features/goroutine/memory.go](../src/features/goroutine/memory.go)
 
 Result:
 
@@ -102,7 +102,7 @@ ok      command-line-arguments  1.328s
 On Linux VM:
 
 ```bash
-cd /examples/features/goroutine
+cd /src/features/goroutine
 go test -bench=. -cpu=1 benchmark_test.go
 
 goos: linux

@@ -16,7 +16,7 @@ case c3<- struct{}{}:
 
 ## First
 
-- [simple](../examples/features/select/simple.go)
+- [simple](../src/features/select/simple.go)
 
 ```go
 select {
@@ -32,7 +32,7 @@ Unblocked 5.002035092s later.
 
 ## What happens when multiple channels have something to read?
 
-- [random](../examples/features/select/random.go)
+- [random](../src/features/select/random.go)
 
 ```go
 select {
@@ -50,8 +50,8 @@ c2Count: 466
 
 ## What if there are never any channels that become ready?
 
-- [time.After](../examples/features/select/time-after.go)
-- [default](../examples/features/select/default.go)
+- [time.After](../src/features/select/time-after.go)
+- [default](../src/features/select/default.go)
 
 ```go
 select {
@@ -67,7 +67,7 @@ default:
 
 ## What if we want to do something but no channels are currently ready?
 
-- [for & break](../examples/features/select/for-break.go)
+- [for & break](../src/features/select/for-break.go)
 
 ```go
 loop:

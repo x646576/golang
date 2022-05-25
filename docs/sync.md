@@ -2,8 +2,8 @@
 
 ## [WaitGroup](https://pkg.go.dev/sync#WaitGroup)
 
-- [examples/features/sync/waitgroup/waitgroup.go](../examples/features/sync/waitgroup/waitgroup.go)
-- [examples/features/sync/waitgroup/loop.go](../examples/features/sync/waitgroup/loop.go)
+- [src/features/sync/waitgroup/waitgroup.go](../src/features/sync/waitgroup/waitgroup.go)
+- [src/features/sync/waitgroup/loop.go](../src/features/sync/waitgroup/loop.go)
 
 ```go
 var wg sync.WaitGroup
@@ -16,7 +16,7 @@ wg.Wait()
 
 Wikipedia: [Mutual exclusion](https://en.wikipedia.org/wiki/Mutual_exclusion)
 
-- [examples/features/sync/mutex/mutex.go](../examples/features/sync/mutex/mutex.go)
+- [src/features/sync/mutex/mutex.go](../src/features/sync/mutex/mutex.go)
 
 ```go
 var lock sync.Mutex
@@ -29,8 +29,8 @@ lock.Unlock()
 wg.Wait()
 ```
 
-- [examples/features/sync/mutex/rwmutex.go](../examples/features/sync/mutex/rwmutex.go)
-- [examples/features/sync/mutex/simple_rwmutex.go](../examples/features/sync/mutex/simple_rwmutex.go)
+- [src/features/sync/mutex/rwmutex.go](../src/features/sync/mutex/rwmutex.go)
+- [src/features/sync/mutex/simple_rwmutex.go](../src/features/sync/mutex/simple_rwmutex.go)
 
 ```go
 var m sync.RWMutex
@@ -72,9 +72,9 @@ Readers  RWMutext      Mutex
 
 Cond implements a condition variable, a rendezvous point for goroutines waiting for or announcing the occurrence of an event.
 
-- [examples/features/sync/cond/cond.go](../examples/features/sync/cond/cond.go): signal
-- [examples/features/sync/cond/broadcast.go](../examples/features/sync/cond/broadcast.go)
-- [examples/features/sync/cond/signal.go](../examples/features/sync/cond/signal.go)
+- [src/features/sync/cond/cond.go](../src/features/sync/cond/cond.go): signal
+- [src/features/sync/cond/broadcast.go](../src/features/sync/cond/broadcast.go)
+- [src/features/sync/cond/signal.go](../src/features/sync/cond/signal.go)
 
 ```go
 c := sync.NewCond(&sync.Mutex{})
@@ -103,7 +103,7 @@ grep -ir sync.Once $(go env GOROOT)/src | wc -l
 128
 ```
 
-- [examples/features/sync/once/once.go](../examples/features/sync/once/once.go)
+- [src/features/sync/once/once.go](../src/features/sync/once/once.go)
 
 ```go
 var once sync.Once
@@ -120,10 +120,10 @@ once.Do(func() {
 
 ## [Pool](https://pkg.go.dev/sync#Pool)
 
-- [examples/features/sync/pool/pool.go](../examples/features/sync/pool/pool.go)
-- [examples/features/sync/pool/memory.go](../examples/features/sync/pool/memory.go)
-- [examples/features/sync/pool/server_test.go](../examples/features/sync/pool/server_test.go)
-- [examples/features/sync/pool/pool-server_test.go](../examples/features/sync/pool/pool-server_test.go)
+- [src/features/sync/pool/pool.go](../src/features/sync/pool/pool.go)
+- [src/features/sync/pool/memory.go](../src/features/sync/pool/memory.go)
+- [src/features/sync/pool/server_test.go](../src/features/sync/pool/server_test.go)
+- [src/features/sync/pool/pool-server_test.go](../src/features/sync/pool/pool-server_test.go)
 
 ```go
 myPool := &sync.Pool{

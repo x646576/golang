@@ -3,7 +3,8 @@
 ## Contents
 
 - [Install](install.md): go version manager
-- [Hello World](examples/helloworld/README.md): init, compile, run, test
+- [Hello World](src/helloworld/README.md): init, compile, run, test
+- [Effective Go](src/effective-go/README.md)
 - [Concurrency](docs/concurrency.md): race condition, deadlock conditions
   - [CSP](docs/csp.md): Communicating Sequential Processes
   - Features
@@ -49,6 +50,9 @@
   - [Create a Go module](https://golang.org/doc/tutorial/create-module)
 - [documentation](https://golang.org/doc/)
   - [Effective Go](https://golang.org/doc/effective_go)
+  - Directory [Sources](https://go.dev/src/)
+    - github: [golang/go/src](https://github.com/golang/go/tree/master/src)
+    - pkg: [Standard library](https://pkg.go.dev/std)
 - [modules](https://golang.org/ref/mod): Dependency management for Go
   - [Using Go Modules](https://blog.golang.org/using-go-modules)
 - [Specification](https://golang.org/ref/spec)
@@ -58,6 +62,7 @@
 ### github
 
 - [golang](https://github.com/golang)
+  - github: [golang/go/src](https://github.com/golang/go/tree/master/src)
 - [golang/go](https://github.com/golang/go)
   - [wiki](https://github.com/golang/go/wiki)
 

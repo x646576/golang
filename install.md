@@ -43,14 +43,6 @@ gvm gos (installed)
 
 ---
 
-## Install gopls
-
-```bash
-go install golang.org/x/tools/gopls@latest
-```
-
----
-
 ## Visual Studio Code Extension
 
 Extension: [Go](https://marketplace.visualstudio.com/items?itemName=golang.go)
@@ -107,12 +99,14 @@ All tools successfully installed. You are ready to Go :).
 
 - [Use Vim as a Go IDE](https://spacevim.org/use-vim-as-a-go-ide/)
 
+### Configuration
+
 ```toml
 [[layers]]
-  name = "lang#go"
+  name = "format"
 
 [[layers]]
-  name = "format"
+  name = "lang#go"
 ```
 
 - go run: `SPC l r`
@@ -120,3 +114,11 @@ All tools successfully installed. You are ready to Go :).
 - go test: `SPC l t`
 - code coverage: `SPC l c`
 - gofmt:`SPC b f`
+
+### Install packages
+
+in `nvim`
+
+```bash
+:GoInstallBinaries
+```

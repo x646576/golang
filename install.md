@@ -6,7 +6,8 @@
 4. Go versions: `gvm list`
 5. Select: `gvm use goX.Y.Z`
 6. Env vars: `go env`
-7. Editor extension
+7. gopls: `go install golang.org/x/tools/gopls@latest`
+8. Editor extension
 
 ## Go Version Manager
 
@@ -38,6 +39,14 @@ gvm gos (installed)
 
    18
 => go1.18
+```
+
+---
+
+## Install gopls
+
+```bash
+go install golang.org/x/tools/gopls@latest
 ```
 
 ---

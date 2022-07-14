@@ -91,3 +91,23 @@ Installing golang.org/x/tools/gopls (/Users/$USER/.gvm/pkgsets/go1.18/global/bin
 
 All tools successfully installed. You are ready to Go :).
 ```
+
+---
+
+## SpaceVim
+
+- [Use Vim as a Go IDE](https://spacevim.org/use-vim-as-a-go-ide/)
+
+```toml
+[[layers]]
+  name = "lang#go"
+
+[[layers]]
+  name = "format"
+```
+
+- go run: `SPC l r`
+- go build: `SPC l b`
+- go test: `SPC l t`
+- code coverage: `SPC l c`
+- gofmt:`SPC b f`

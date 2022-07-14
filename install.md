@@ -24,9 +24,9 @@ source /Users/$USER/.gvm/scripts/gvm
 ### Install
 
 ```bash
-gvm install go1.18
+gvm install go1.18 -pb -b -B
 gvm alias create 18 go1.18
-gvm use 18 # --default
+gvm use 18 --default
 ```
 
 ### List installed

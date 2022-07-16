@@ -18,18 +18,19 @@ zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binsc
 
 ### Restart a terminal session
 
-`~/.zprofile`:
+`~/.zshrc`:
 
 ```bash
+# Languages
+## Go
 source /Users/$USER/.gvm/scripts/gvm
 ```
 
 ### Install
 
 ```bash
-gvm install go1.18 -pb -b -B
-gvm alias create 18 go1.18
-gvm use 18 --default
+gvm install go1.18 -B
+gvm use go1.18 --default
 ```
 
 ### List installed

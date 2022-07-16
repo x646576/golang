@@ -18,6 +18,8 @@ zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binsc
 
 ### Restart a terminal session
 
+`~/.zprofile`:
+
 ```bash
 source /Users/$USER/.gvm/scripts/gvm
 ```
